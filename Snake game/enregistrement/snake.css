@@ -1,40 +1,43 @@
 html {
-  background: black;
-  color: white;
-background-image: url(/object/giphy.gif);
-background-repeat: no-repeat;
-background-position:center;
-background-size:cover;
-background-attachment: fixed;
-margin-bottom:0px;
-margin-top:0px;
-}         /*  comment    */
+  background: black;  /*  page background color  */
+  color: white;/* text color */
+  background-image: url(/object/giphy.gif); /*  page background image  */
+  background-repeat: no-repeat;/*  display the image only once  */
+  background-position: center;/*  center the image  */
+  background-size: cover;/*  cover the entire page with the image  */
+  background-attachment: fixed;/*  fix the image when the user scrolls  */
+  margin-bottom: 0px;/*  adjust the margin   */
+  margin-top: 0px;
+}         /*  modifies the html tag    */
 
 h1 {
   text-align: center;
-}
+}/* modifies the h1 tag used as a header for the title   */
 
 label {
   display: block;
   text-align: center;
   height: 50px;
-}
+}/*  modifies the label tag to center it   */
+
 input {
   display: block;
   margin: auto;
   margin-bottom: 30px;
-}
+}/* modifies the input tag to center it */
 
 p {
   display: block;
   text-align: center;
   margin-bottom: 2%;
-}
+} /* modifies the p tag to center it */
 
 .image {
  /* filter: invert();*/
  height: 250px;
-}
+}/* modifies the image class by giving it a height  */
+
+
 .centre {
     border: 0;
     line-height: 2.5;
@@ -54,26 +57,27 @@ p {
     box-shadow:
       inset 2px 2px 3px rgba(255, 255, 255, 0.6),
       inset -2px -2px 3px rgba(0, 0, 0, 0.6);
-}
+}/* modifies the center tag for the play button and gives it a texture */
+
 .centre:hover {
     background-color: rgba(255, 0, 0, 1);
-  }
+  }/* used to give a physical appearance and maintain the button when clicked */
   
   .centre:active {
     box-shadow:
       inset -2px -2px 3px rgba(255, 255, 255, 0.6),
       inset 2px 2px 3px rgba(0, 0, 0, 0.6);
-  }
+  }/* used for the center class for the edges when the button is active */
   
 
-.tableausco {
+/* .tableausco {
  border: 1px solid #2e9e1257;
  height: 500px;
  width: 400px;
 margin: auto;
 background: rgb(1, 19, 3);
 border-radius: 20px;
-}
+}   To be completed */
 
 .titre {
   border: 0 solid #ccc;
@@ -81,4 +85,4 @@ border-radius: 20px;
   width: 400px;
   margin: auto;
   border-radius: 20px;
-}
+}/* gives texture to the title */
