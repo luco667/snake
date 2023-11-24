@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <!-- comment -->
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Web page encoding -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-sheme" content="dark light" />
+    <!-- Preference for dark mode -->
+    <meta name="creator" content="Lucas et Jephte" />
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="game.css" />
+  </head>
+  <body>
+    <div class="fondgameboy">
+      <div id="game-container">
+        <canvas id="gc" class="game-canvas" width="400" height="400"></canvas>
+      </div>
+      <table>
+        <thead>
+          <td>
+            <div class="keys">
+              <a class="up arr" onclick="Snake.action('up')">
+                <i class="chevron up"></i
+              ></a>
+              <br />
+              <a class="left arr" onclick="Snake.action('left')">
+                <i class="chevron left"></i
+              ></a>
+              <a class="middle arr"><i class="middle home"></i></a>
+              <a class="right arr" onclick="Snake.action('right')">
+                <i class="chevron right"></i
+              ></a>
+              <br />
+              <a class="down arr" onclick="Snake.action('down')">
+                <i class="chevron down"></i
+              ></a>
+            </div>
+          </td>
+          <td>
+            <div class="pause">
+              <a onclick="Snake.pause('pause')">
+                <i class="but"></i
+              ></a>
+            </div>
+          </td>
+          <td>
+            <div class="boutona">
+              <a onclick="Snake.reset('reset')"><i class="but"></i></a>
+            </div>
+          </td>
+        </thead>
+        <tbody>
+          <td>
+            <div class="menu">
+              <a href="/enregistrement/snake.html"><i class="btnmenu"></i></a>
+            </div>
+          </td>
+          <td>
+            <div><a onclick="changeColor()"><i class="playgame"></i></a></div>
+          </td>
+        </tbody>
+      </table>
+      <script type="text/javascript" src="game.js"></script>
+    </div>
+  </body>
+</html>

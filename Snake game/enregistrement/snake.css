@@ -1,0 +1,84 @@
+html {
+  background: black;
+  color: white;
+background-image: url(/object/giphy.gif);
+background-repeat: no-repeat;
+background-position:center;
+background-size:cover;
+background-attachment: fixed;
+margin-bottom:0px;
+margin-top:0px;
+}         /*  comment    */
+
+h1 {
+  text-align: center;
+}
+
+label {
+  display: block;
+  text-align: center;
+  height: 50px;
+}
+input {
+  display: block;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+p {
+  display: block;
+  text-align: center;
+  margin-bottom: 2%;
+}
+
+.image {
+ /* filter: invert();*/
+ height: 250px;
+}
+.centre {
+    border: 0;
+    line-height: 2.5;
+    padding: 0 20px;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 10px;
+    background-color: rgba(220, 0, 0, 1);
+    background-image: linear-gradient(
+      to top left,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.2) 30%,
+      rgba(0, 0, 0, 0)
+    );
+    box-shadow:
+      inset 2px 2px 3px rgba(255, 255, 255, 0.6),
+      inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+}
+.centre:hover {
+    background-color: rgba(255, 0, 0, 1);
+  }
+  
+  .centre:active {
+    box-shadow:
+      inset -2px -2px 3px rgba(255, 255, 255, 0.6),
+      inset 2px 2px 3px rgba(0, 0, 0, 0.6);
+  }
+  
+
+.tableausco {
+ border: 1px solid #2e9e1257;
+ height: 500px;
+ width: 400px;
+margin: auto;
+background: rgb(1, 19, 3);
+border-radius: 20px;
+}
+
+.titre {
+  border: 0 solid #ccc;
+  background:rgba(172, 255, 47, 0.692);
+  width: 400px;
+  margin: auto;
+  border-radius: 20px;
+}
