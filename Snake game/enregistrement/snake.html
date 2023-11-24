@@ -3,7 +3,7 @@
 <html lang="en">
   <!-- HTML tag with language in EN -->
   <!-- comment -->
-  <head>
+  <head><!-- HTML tag to declare page settings and header name -->
     <meta charset="UTF-8" />
     <!-- Web page encoding -->
     <meta
@@ -27,34 +27,31 @@
     <!-- links the style page -->
     <title>Snake</title>
     <!-- title of the web page -->
-  </head>
-  <body>
-    <header>
-      <div class="imglsv">
-        <center>
+  </head><!-- HTML Tag to declare the end of the head section -->
+    <body><!-- declaration of the body of the page (what is displayed)-->
+      <div> <!-- content element -->
+        <center> <!-- tag that centers the elements -->
           <img
-            class="image"
+            class="image" 
             src="/object/Couleurs_Cadre_transparents.png"
             alt="CC Simone Veil High School"
-          />
+          /><!-- allows inserting an image -->
+          <!-- linked to CSS through the "class" attribute; "src" indicates the location of the image; "alt" provides a placeholder if the image disappears -->
         </center>
-      </div>
-      <div id="serpent"></div>
-      <div class="title">
-        <div class="eyes"></div>
-        <h1>S N A K E</h1>
+      </div><!-- To create a content grouping -->
+      <div>
+        <h1 class="titre">S N A K E</h1>
         <!-- title of the page -->
       </div>
       <div>
-        <p>Created by Lucas and Jephte</p>
+        <p>Created by Lucas, Jephte and Ilhem</p><!-- to create a paragraph -->
       </div>
-      <label>--Sign up--</label>
+      <label>--Sign up--</label><!-- Registration to be completed (querySelector in JS to be done) -->
       <label for="pseudo">Your username:</label>
-      <input id="pseudo" type="text" required />
-      <label for="email">Your email:</label>
-      <input id="email" type="email" required />
-      <a href="/jeu/snake2.html"><input class="center" value="Play"/></a>
-      <!-- text associated with a page -->
-    </header>
-  </body>
+      <input id="pseudo" type="text" required /><!-- creates an area to enter text -->
+      <label for="email">Your email:</label><!-- tag to display captions for choices -->
+      <input id="email" type="email" required /><!-- the type attribute serves as an obligation to only enter text or to be able to propose emails already entered when submitted with a form tag -->
+      <a href="/jeu/snake2.html"><input class="centre" value="Play"/></a> <!-- the a tag serves as an anchor element to allow the button to open another page using href -->
+      <!-- the value attribute serves to give the value of the element-->
+  </body><!-- declaration of the end of the body tag -->
 </html>
