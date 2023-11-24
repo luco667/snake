@@ -14,50 +14,52 @@
   <body>
     <div class="fondgameboy">
       <div id="game-container">
-        <canvas id="gc" class="game-canvas" width="400" height="400"></canvas>
+        <canvas id="gc" class="game-canvas" width="400" height="400"></canvas><!-- insertion du zone pour crée des formes en js-->
       </div>
-      <table>
-        <thead>
+      <table><!-- insertion d'un tableau pour la position des éléments -->
+        <thead> <!-- insertion de l'entête du tableau -->
           <td>
-            <div class="keys"><!-- division  -->
+            <div class="keys"><!-- division pour rassembler les touches directionnels   -->
               <a class="up arr" onclick="Snake.action('up')">
                 <i class="chevron up"></i
-              ></a>
+              ></a><!-- Bouton pour allez vers le haut -->
               <br />
               <a class="left arr" onclick="Snake.action('left')">
                 <i class="chevron left"></i
-              ></a>
+              ></a><!-- Bouton pour allez vers le haut -->
               <a class="middle arr"><i class="middle home"></i></a>
+              <!-- Bouton du milieu ne servant a rien encore -->
               <a class="right arr" onclick="Snake.action('right')">
+                <!-- Bouton pour allez vers la droite -->
                 <i class="chevron right"></i
               ></a>
-              <br />
+              <br /><!-- saut de ligne-->
               <a class="down arr" onclick="Snake.action('down')">
                 <i class="chevron down"></i
-              ></a>
+              ></a><!-- Bouton pour allez vers le haut -->
             </div>
           </td>
           <td>
             <div class="pause">
               <a onclick="Snake.pause('pause')">
                 <i class="but"></i
-              ></a>
+              ></a><!-- Bouton pour allez vers le haut -->
             </div>
           </td>
           <td>
             <div class="boutona">
               <a onclick="Snake.reset('reset')"><i class="but"></i></a>
-            </div>
+            </div><!-- Bouton pour allez vers le haut -->
           </td>
         </thead>
         <tbody>
           <td>
             <div class="menu">
-              <a href="/enregistrement/snake.html"><i class="btnmenu"></i></a>
+              <a href="/enregistrement/snake.html"><i class="btnmenu"></i></a><!-- Bouton pour allez vers le haut -->
             </div>
           </td>
           <td>
-            <div><a onclick="changeColor()"><i class="playgame"></i></a></div>
+            <div><a onclick="changeColor()"><i class="playgame"></i></a></div><!-- Bouton pour allez vers le haut -->
           </td>
         </tbody>
       </table>
