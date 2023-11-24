@@ -1,65 +1,65 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <!-- comment -->
+  <!-- Comment -->
   <head>
     <meta charset="UTF-8" />
     <!-- Web page encoding -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="color-sheme" content="dark light" />
+    <meta name="color-scheme" content="dark light" />
     <!-- Preference for dark mode -->
-    <meta name="creator" content="Lucas;Jephte;Ilhem" /><!-- metadonné pour déclarer les créateurs -->
-    <title>Snake Game</title><!-- déclaration du nom de l'entête de la par -->
-    <link rel="stylesheet" href="game.css" /><!-- liens pour la page css qui donne le style de la page -->
+    <meta name="creator" content="Lucas;Jephte;Ilhem" /><!-- Metadata to declare the creators -->
+    <title>Snake Game</title><!-- Declaration of the header name -->
+    <link rel="stylesheet" href="game.css" /><!-- Links to the CSS page that styles the page -->
   </head>
   <body>
-    <div class="fondgameboy">
+    <div class="gameboy-background">
       <div id="game-container">
-        <canvas id="gc" class="game-canvas" width="400" height="400"></canvas><!-- insertion du zone pour crée des formes en js-->
+        <canvas id="gc" class="game-canvas" width="400" height="400"></canvas><!-- Insertion of the area to create shapes in JS-->
       </div>
-      <table><!-- insertion d'un tableau pour la position des éléments -->
-        <thead> <!-- insertion de l'entête du tableau -->
+      <table><!-- Insertion of a table for the position of elements -->
+        <thead> <!-- Insertion of the table header -->
           <td>
-            <div class="keys"><!-- division pour rassembler les touches directionnels   -->
+            <div class="keys"><!-- Division to gather directional keys   -->
               <a class="up arr" onclick="Snake.action('up')">
-                <i class="chevron up"></i
-              ></a><!-- Bouton pour allez vers le haut -->
+                <i class="chevron up"></i>
+              </a><!-- Button to go up -->
               <br />
               <a class="left arr" onclick="Snake.action('left')">
-                <i class="chevron left"></i
-              ></a><!-- Bouton pour allez vers le haut -->
+                <i class="chevron left"></i>
+              </a><!-- Button to go left -->
               <a class="middle arr"><i class="middle home"></i></a>
-              <!-- Bouton du milieu ne servant a rien encore -->
+              <!-- Middle button serving no purpose yet -->
               <a class="right arr" onclick="Snake.action('right')">
-                <!-- Bouton pour allez vers la droite -->
-                <i class="chevron right"></i
-              ></a>
-              <br /><!-- saut de ligne-->
+                <!-- Button to go right -->
+                <i class="chevron right"></i>
+              </a>
+              <br /><!-- Line break -->
               <a class="down arr" onclick="Snake.action('down')">
-                <i class="chevron down"></i
-              ></a><!-- Bouton pour allez vers le haut -->
+                <i class="chevron down"></i>
+              </a><!-- Button to go down -->
             </div>
           </td>
           <td>
             <div class="pause">
               <a onclick="Snake.pause('pause')">
-                <i class="but"></i
-              ></a><!-- Bouton pour allez vers le haut -->
+                <i class="but"></i>
+              </a><!-- Button to pause -->
             </div>
           </td>
           <td>
-            <div class="boutona">
+            <div class="buttona">
               <a onclick="Snake.reset('reset')"><i class="but"></i></a>
-            </div><!-- Bouton pour allez vers le haut -->
+            </div><!-- Button to reset -->
           </td>
         </thead>
         <tbody>
           <td>
             <div class="menu">
-              <a href="/enregistrement/snake.html"><i class="btnmenu"></i></a><!-- Bouton pour allez vers le haut -->
+              <a href="/enregistrement/snake.html"><i class="btnmenu"></i></a><!-- Button to go to registration -->
             </div>
           </td>
           <td>
-            <div><a onclick="changeColor()"><i class="playgame"></i></a></div><!-- Bouton pour allez vers le haut -->
+            <div><a onclick="changeColor()"><i class="playgame"></i></a></div><!-- Button to play the game -->
           </td>
         </tbody>
       </table>
