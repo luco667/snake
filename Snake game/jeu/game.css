@@ -1,29 +1,32 @@
 html {
-  background: black;  
+  background: black;
+} /* stylize html tag*/
+
+body {
+  margin: 0;
+} /* stylize and place body html tag*/
+
+br {
+  border: 2px solid white;
 }
 
 .fondgameboy {
-  background-image: url(/object/portable-retro-game-console-90s-260nw-2155515871.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-attachment: relative;
+  background-image: url(/object/portable-retro-game-console-90s-260nw-2155515871.jpg); /* set image on background*/
+  background-repeat: no-repeat; /* only display the image once */
+  background-position: center; /* center the background image*/
+  background-size: cover; /* cover everything with the image*/
+  background-attachment: relative; /*you can scrolls the background*/
   border: 10px solid grey;
   width: 600px;
   height: 1000px;
   margin-top: 20px;
   margin-right: auto;
-  margin-left: auto;
-  border-radius: 150px;
-}
-
-body {
-  margin: 0;
-  border: 5px solid white;
-  
-}
+  margin-left: auto; /*place the image in the web page*/
+  border-radius: 150px; /*rounded the edges*/
+} /* stylize and place .fondgameboy class*/
 
 .game-canvas {
+  /* this is the box contain the game*/
   width: 100%;
   height: 100vw;
   max-width: 360px;
@@ -33,31 +36,9 @@ body {
   margin-top: 120px;
   margin-bottom: 155px;
   border-radius: 5px;
-}
+} /* stylize and place .game-canvas class*/
 
-.keys {
-  font-family: "Lato", sans-serif;
-  text-align: center;
-  width: 235px;
-  box-sizing: border-box;
-  height: 200px;
-  border: 2px solid white;
-}
-
-.up {
-  display: table-caption;
-  position: relative;
-  top: -0.05px;
-}
-
-.middle {
-  border-style: solid;
-  content: "";
-  display: table-caption;
-  position: relative;
-}
-
-.but {
+.redbut {
   border-style: solid;
   width: 75px;
   content: "";
@@ -69,45 +50,33 @@ body {
   border-color: #2c2b2b75;
   margin-top: 20px;
   cursor: pointer;
-  
-}
-.but:active {
+} /* stylize and place .game-canvas class*/
+
+.redbut:active {
   background: #492222;
   border-color: #966969;
   box-shadow: rgba(0, 0, 218, 0.25) 0px 30px 60px -12px inset,
     rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
-}
-.chevron::before {
-  border-style: solid;
-  border-width: 4px 4px 0 0;
-  content: "";
-  display: inline-table;
-  height: 10px;
-  width: 10px;
-  top: 40px;
-  position: relative;
-  transform: rotate(-45deg);
-  margin-bottom: 10px;
+} /*give a texture to redbutton when they're clicked*/
+
+.keys {
+  /* this is the box contains the arrow button*/
+  font-family: "Lato", sans-serif;
+  text-align: center;
+  width: 235px;
+  box-sizing: border-box;
+  height: 200px;
+} /* stylize and place .keys class*/
+
+.keysplace {/*replace keys in box*/
+display: block;
+padding: 29.5px;
+padding-left: 42.5px;
 }
 
-.chevron.down::before {
-  transform: rotate(135deg);
-  top: -1px;
-}
 
-.chevron.right::before {
-  transform: rotate(45deg);
-  top: 1.5px;
-  left: -1px;
-}
-
-.chevron.left::before {
-  transform: rotate(225deg);
-  top: 1.5px;
-  left: 1px;
-}
-
-.arr {
+.box {
+  /* this box contains the outlines of the keys*/
   cursor: pointer;
   width: 30px;
   height: 30px;
@@ -125,40 +94,81 @@ body {
   background-position: relative;
 }
 
-.home {
-  display: inline-block;
+.box:active {
+  background: #555;
+} /*give a texture to box button when they're clicked*/
+
+.chevron::before {/* give a texture of arrows to border*/
+  border-style: solid;
+  border-width: 4px 4px 0 0;
+  content: "";
+  display: table inline;
+  height: 10px;
+  width: 10px;
+  top: 40px;
+  position: relative;
+  transform: rotate(-45deg);
+  margin-bottom: 5px;
+}
+
+.chevron.down::before {
+  transform: rotate(135deg);
+  top: -1px;
+}/* link the arrow with the button box*/
+
+.chevron.right::before {
+  transform: rotate(45deg);
+  top: 1.5px;
+  left: -1px;
+}/* link the arrow with the button box*/
+
+.chevron.left::before {
+  transform: rotate(225deg);
+  top: 1.5px;
+  left: 1px;
+}/* link the arrow with the button box*/
+
+.chevron.up::before {
+ top: 3px;
+}/* link the arrow with the button box*/
+
+.color.middle::before {
+  content: "";
+  position: relative;
+}/* link the square with the button box*/
+
+.color::before {
+  display: inline-table;
   cursor: pointer;
   text-align: center;
   height: 10px;
   line-height: 10px;
   width: 10px;
-  background: rgb(56, 55, 55);
+  background: rgb(77, 70, 70);
   transform: rotate(45deg); /* Internet Explorer */
-  top: 4px;
-}
-
-.arr:active {
-  background: #555;
-}
+}/*make a square*/
 
 #game-container {
   display: flex;
   flex-direction: column;
-}
- 
-.pause {
-  border: 2px solid white;
+}/* place the display of game*/
+
+.Bbutton {
   margin-top: 10px;
   margin-left: 127px;
-}
+}/*place the B button*/
 
-td {
+.Abutton {
+  margin-bottom: 100px;
+  margin-left: 10px;
+}/*place the A button*/
+
+/*td {
   /*TABLEAU TOUCHE*/
-    border: 2px solid white;
+ /* border: 2px solid white;*/
 
-}
 
-.btnmenu {
+.SelectBut {/*stylize and place select and start menu*/
   background-color: rgb(99, 99, 99);
   height: 25px;
   width: 75px;
@@ -171,17 +181,12 @@ td {
   cursor: pointer;
   display: block;
 }
-.btnmenu:hover {
+.SelectBut:hover {
   background-color: rgb(20, 20, 31);
-}
+}/*give a texture when clicked*/
 
-.boutona {
-  border: 2px solid white;
-  margin-bottom: 100px;
-  margin-left: 10px;
-}
 
-.playgame {
+.Startbut {
   background-color: rgb(99, 99, 99);
   height: 25px;
   width: 75px;
@@ -195,6 +200,6 @@ td {
   margin-left: 29px;
 }
 
-.playgame:hover {
+.Startbut:hover {
   background-color: rgb(43, 39, 39);
-}
+}/*give a texture when clicked*/
