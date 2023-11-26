@@ -1,6 +1,13 @@
-var Snake = (function () {
-  const INITIAL_TAIL = 2;
-  var fixedTail = true;
+function getRandomColor() {
+  return (
+    "#" + ("00000" + ((Math.random() * 16777216) << 0).toString(16)).substr(-6)
+  );
+} /*create random color*/
+
+var Snake /*create the snake game function*/ = (function () {
+  const INITIAL_TAIL = 2; /*initializes the size of the start of the game for the snake*/
+  var fixedTail = true; /*
+  fix the tail to the head*/
   var intervalID; 
   var tileCount = 10;
   var gridSize = 400 / tileCount;
@@ -25,6 +32,8 @@ var Snake = (function () {
   var ActionEnum = { none: 0, up: 1, down: 2, left: 3, right: 4 };
   Object.freeze(ActionEnum);
   var lastAction = ActionEnum.none;
+  let color = getRandomColor();
+  let color2 = getRandomColor();
 
   function setup() {
     canv = document.getElementById("gc");
@@ -96,7 +105,7 @@ var Snake = (function () {
       console.log("x:" + player.x + ", y:" + player.y);
       console.log("tail:" + tail + ", trail.length:" + trail.length);
     },
-    
+
     loop: function () {
       reward = -0.1;
 
@@ -148,8 +157,8 @@ var Snake = (function () {
         ctx.fillText("(esc) reset", 24, 356);
         ctx.fillText("(space) pause", 24, 374);
       }
-       
-      ctx.fillStyle = 'red';  /* snake color */
+
+      ctx.fillStyle = color; /* snake color */
       for (var i = 0; i < trail.length - 1; i++) {
         ctx.fillRect(
           trail[i].x * gridSize + 1,
@@ -162,7 +171,7 @@ var Snake = (function () {
         if (!stopped && trail[i].x == player.x && trail[i].y == player.y) {
           game.reset();
         }
-        ctx.fillStyle = 'red';   /* snake color queue */
+        ctx.fillStyle = color; /* snake color queue */
       }
       ctx.fillRect(
         trail[trail.length - 1].x * gridSize + 1,
@@ -191,7 +200,7 @@ var Snake = (function () {
         );
       }
 
-      ctx.fillStyle = "darkred"; /*faire une pomme*/
+      ctx.fillStyle = color2; /*faire une pomme*/
       ctx.fillRect(
         fruit.x * gridSize + 1,
         fruit.y * gridSize + 1,
@@ -200,7 +209,7 @@ var Snake = (function () {
       );
 
       if (stopped) {
-        ctx.fillStyle = "rgba(165, 203, 104, 1)";  
+        ctx.fillStyle = "rgba(165, 203, 104, 1)";
         ctx.font = "small-caps bold 14px Helvetica";
         ctx.fillText("press ARROW KEYS to START...", 24, 374);
       }
@@ -322,16 +331,17 @@ var Snake = (function () {
     info: {
       tileCount: tileCount,
     },
-    restart: function restart() {
+    startbut: function () {
       //ajout
-      velocity.x = 0;
-      velocity.y = 1;
+      color = getRandomColor();
+    },
+    middlebut: function () {
+      color2 = getRandomColor();
     },
   };
-  })();
+})();
 
 Snake.start(8);
 Snake.setup.keyboard(true);
 Snake.setup.fixedTail(false);
-
 //rajout
