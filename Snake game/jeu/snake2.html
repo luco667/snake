@@ -7,63 +7,112 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="color-scheme" content="dark light" />
     <!-- Preference for dark mode -->
-    <meta name="creator" content="Lucas;Jephte;Ilhem" /><!-- Metadata to declare the creators -->
-    <title>Snake Game</title><!-- Declaration of the header name -->
-    <link rel="stylesheet" href="game.css" /><!-- Links to the CSS page that styles the page -->
+    <link rel="icon" href="/object/427533.ico" type="image/x-icon" />
+    <!-- change the page icon -->
+    <meta name="creator" content="Lucas;Jephte;Ilhem" />
+    <!-- Metadata to declare the creators -->
+    <title>Snake Game</title>
+    <!-- Declaration of the header name -->
+    <link rel="stylesheet" href="game.css" />
+    <!-- Links to the CSS page that styles the page -->
   </head>
   <body>
-    <div class="gameboy-background">
+    <div class="fondgameboy">
       <div id="game-container">
-        <canvas id="gc" class="game-canvas" width="400" height="400"></canvas><!-- Insertion of the area to create shapes in JS-->
+        <canvas id="gc" class="game-canvas" width="400" height="400"></canvas
+        ><!-- Insertion of the area to create shapes in JS-->
       </div>
-      <table><!-- Insertion of a table for the position of elements -->
-        <thead> <!-- Insertion of the table header -->
+      <table>
+        <!-- Insertion of a table for the position of elements -->
+        <thead>
+          <!-- Insertion of the table header -->
           <td>
-            <div class="keys"><!-- Division to gather directional keys   -->
-              <a class="up arr" onclick="Snake.action('up')">
-                <i class="chevron up"></i>
-              </a><!-- Button to go up -->
-              <br />
-              <a class="left arr" onclick="Snake.action('left')">
-                <i class="chevron left"></i>
-              </a><!-- Button to go left -->
-              <a class="middle arr"><i class="middle home"></i></a>
-              <!-- Middle button serving no purpose yet -->
-              <a class="right arr" onclick="Snake.action('right')">
-                <!-- Button to go right -->
-                <i class="chevron right"></i>
-              </a>
-              <br /><!-- Line break -->
-              <a class="down arr" onclick="Snake.action('down')">
-                <i class="chevron down"></i>
-              </a><!-- Button to go down -->
+            <div class="keys">
+              <!-- Division to gather directional keys   -->
+              <table class="keysplace">
+                <thead>
+                  <td>
+                    <a class="up box" onclick="Snake.action('up')"
+                      ><!-- 
+                anchor with an onclick to link the javascript to the clicked action   -->
+                      <i class="chevron up"></i
+                      ><!-- Button to go up --></a
+                    >
+                  </td>
+                </thead>
+                <tbody>
+                  <td>
+                    <a class="left box" onclick="Snake.action('left')"
+                      ><!-- 
+                anchor with an onclick to link the javascript to the clicked action   -->
+                      <i class="chevron left"></i> </a
+                    ><!-- Button to go left -->
+                    <a
+                      class="middle box"
+                      onclick="Snake.middlebut()"
+                      ><i class="color middle"></i
+                    ></a>
+                    <!-- Middle button serving no purpose yet -->
+                    <a class="right box" onclick="Snake.action('right')"
+                      ><!-- 
+                anchor with an onclick to link the javascript to the clicked action   -->
+                      <!-- Button to go right -->
+                      <i class="chevron right"></i>
+                    </a>
+                  </td>
+                </tbody>
+                <!-- Line break -->
+                <tfoot>
+                  <td>
+                    <a class="down box" onclick="Snake.action('down')"
+                      ><!-- 
+                anchor with an onclick to link the javascript to the clicked action   -->
+                      <i class="chevron down"></i>
+                    </a>
+                  </td>
+                </tfoot>
+                <!-- Button to go down -->
+              </table>
             </div>
           </td>
           <td>
-            <div class="pause">
+            <div class="Bbutton">
               <a onclick="Snake.pause('pause')">
-                <i class="but"></i>
-              </a><!-- Button to pause -->
+                <i class="redbut"></i
+                ><!-- Button to pause --> </a
+              ><!-- anchor with an onclick to link the javascript to the clicked action   -->
             </div>
           </td>
           <td>
-            <div class="buttona">
-              <a onclick="Snake.reset('reset')"><i class="but"></i></a>
-            </div><!-- Button to reset -->
+            <div class="Abutton">
+              <a onclick="Snake.reset('reset')"
+                ><i class="redbut"></i
+                ><!-- Button to reset --></a
+              ><!-- anchor with an onclick to link the javascript to the clicked action   -->
+            </div>
           </td>
         </thead>
         <tbody>
           <td>
             <div class="menu">
-              <a href="/enregistrement/snake.html"><i class="btnmenu"></i></a><!-- Button to go to registration -->
+              <a href="/enregistrement/snake.html"
+                ><i class="SelectBut"></i
+                ><!-- Button to go to registration --></a
+              ><!-- anchor with an onclick to link the javascript to the clicked action   -->
             </div>
           </td>
           <td>
-            <div><a onclick="changeColor()"><i class="playgame"></i></a></div><!-- Button to play the game -->
+            <div>
+              <a onclick="Snake.startbut()" 
+                ><i class="Startbut"></i
+                ><!-- Button to play the game --></a
+              ><!-- anchor with an onclick to link the javascript to the clicked action   -->
+            </div>
           </td>
         </tbody>
       </table>
       <script type="text/javascript" src="game.js"></script>
+      <!-- link the javascript file to the web page -->
     </div>
   </body>
 </html>
