@@ -1,14 +1,26 @@
 html {
   background: black;  /*  page background color  */
   color: white;/* text color */
-  background-image: url(/object/giphy.gif); /*  page background image  */
+
+
+  margin-bottom: px;/*  adjust the margin   */
+  margin-top: 0px;
+}         /*  modifies the html tag    */
+body {
+  margin: 0;
+}
+.diskcontent {
+  background-image: url(/object/gameboydisk.png); /*  page background image  */
   background-repeat: no-repeat;/*  display the image only once  */
   background-position: center;/*  center the image  */
   background-size: cover;/*  cover the entire page with the image  */
-  background-attachment: fixed;/*  fix the image when the user scrolls  */
-  margin-bottom: 0px;/*  adjust the margin   */
-  margin-top: 0px;
-}         /*  modifies the html tag    */
+  background-attachment: relative;/*  fix the image when the user scrolls  */
+  width: 1000px;
+  height: 600px;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
 
 h1 {
   text-align: center;
@@ -17,19 +29,16 @@ h1 {
 label {
   display: block;
   text-align: center;
-  height: 50px;
 }/*  modifies the label tag to center it   */
 
 input {
   display: block;
   margin: auto;
-  margin-bottom: 30px;
 }/* modifies the input tag to center it */
 
 p {
   display: block;
   text-align: center;
-  margin-bottom: 2%;
 } /* modifies the p tag to center it */
 
 .image {
