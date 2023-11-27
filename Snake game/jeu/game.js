@@ -8,22 +8,22 @@ var Snake /*create the snake game function*/ = (function () {
   const INITIAL_TAIL = 2; /*initializes the size of the start of the game for the snake*/
   var fixedTail = true; /*
   fix the tail to the head*/
-  var intervalID; 
-  var tileCount = 10;
-  var gridSize = 400 / tileCount;
+  var intervalID; /*set up the time*/
+  var tileCount = 10;/*set up the size of cases*/
+  var gridSize = 400 / tileCount;/*set up the grid*/
   const INITIAL_PLAYER = {
     x: Math.floor(tileCount / 2),
     y: Math.floor(tileCount / 2),
-  };
+  };/* set up the physique of players*/
 
-  var velocity = { x: 0, y: 0 };
-  var player = { x: INITIAL_PLAYER.x, y: INITIAL_PLAYER.y };
+  var velocity = { x: 0, y: 0 };/* set up the speed*/
+  var player = { x: INITIAL_PLAYER.x, y: INITIAL_PLAYER.y };/*place the player*/
 
-  var walls = false;
-  var fruit = { x: 1, y: 1 };
+  var walls = false;/*make walls not solid*/
+  var fruit = { x: 1, y: 1 };/*place the fruit on grid*/
 
-  var trail = [];
-  var tail = INITIAL_TAIL;
+  var trail = [];/* set up the trail*/
+  var tail = INITIAL_TAIL;/* set up the first tail*/
 
   var reward = 0;
   var points = 0;
